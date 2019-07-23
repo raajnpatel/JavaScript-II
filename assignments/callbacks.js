@@ -47,19 +47,29 @@ function sumNums(x, y, cb) {
     cb(x+y);
   // sumNums adds two numbers (x, y) and passes the result to the callback.
 }
+sumNums(1, 2, function(sum) {
+    console.log(sum);
+});
 
 function multiplyNums(x, y, cb) {
     cb(x*y);
   // multiplyNums multiplies two numbers and passes the result to the callback.
 }
-sumNums(1, 2, function(sum) {
-    console.log(sum);
+multiplyNums(4, 5, function(product) {
+    console.log(product);
 });
 
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
+    cb(list.includes(item));
 }
+contains("Gum", items, function(boo) {
+    console.log(boo);
+});
+contains("Pencil", items, function(b) {
+   console.log(b);
+});
 
 /* STRETCH PROBLEM */
 
